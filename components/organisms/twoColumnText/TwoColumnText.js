@@ -11,7 +11,6 @@ export default function TwoColumnText(contentModule) {
     backgroundImage,
     customClass,
   } = contentModule.contentModule.fields;
-  console.log("contentModule", contentModule);
   return (
     <section
       className={`${classes.oTwoColumnTextBlock} ${classes[customClass]}`}

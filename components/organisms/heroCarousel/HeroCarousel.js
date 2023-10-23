@@ -14,8 +14,6 @@ export default function HeroCarousel(props) {
   const CarouselImages = props.contentModule.fields.imageCarousel.fields.images;
   const ctaList = props.contentModule.fields;
 
-  console.log("poop", props.contentModule.fields);
-
   return (
     <div className={`${classes.oHeroCarouselBanner}`}>
       <div className={`${classes.oCarouselRegion}`}>

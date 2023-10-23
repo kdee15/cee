@@ -1,0 +1,95 @@
+// MOLECULE [ NAVIGATION ] ############################################################################################
+
+@import "scss/.base/module-index";
+
+// A. GLOBAL STYLES +++++++++++++++++++++++++++++++++++++
+
+.oCardList {
+  position: relative;
+  height: 100vh;
+  overflow: hidden;
+  background-color: white;
+}
+
+.aBlockTitle {
+  text-align: center;
+  margin: 100px auto 50px;
+}
+
+.oCards {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  gap: 20px;
+  .mCard {
+    text-align: center;
+    flex: 1 1;
+    max-width: 350px;
+    &.green {
+      .mImage {
+        border: 10px solid $green;
+      }
+      .aTitle {
+        color: $green;
+      }
+    }
+    &.yellow {
+      .mImage {
+        border: 10px solid $yellow;
+      }
+      .aTitle {
+        color: $yellow;
+      }
+    }
+    &.orange {
+      .mImage {
+        border: 10px solid $orange;
+      }
+      .aTitle {
+        color: $orange;
+      }
+    }
+    .mImage {
+      aspect-ratio: 1/1;
+      border-radius: 50px;
+      background-size: cover;
+      background-position: center;
+    }
+    .aTitle {
+      margin-top: 20px;
+      font-family: $garetHeavy;
+    }
+  }
+}
+
+// A. END +++++++++++++++++++++++++++++++++++++++++++++++
+
+// B. GRACEFUL DEGRADATION ++++++++++++++++++++++++++++++
+
+@media ($md-dn) {
+}
+
+// B. END +++++++++++++++++++++++++++++++++++++++++++++++
+
+// C. MIN-WIDTH: 768px ++++++++++++++++++++++++++++++++++
+
+@media ($md-up) {
+}
+
+// C. END +++++++++++++++++++++++++++++++++++++++++++++++
+
+// D. MIN-WIDTH: 992px ++++++++++++++++++++++++++++++++++
+
+@media ($md-up) {
+}
+
+// D. END +++++++++++++++++++++++++++++++++++++++++++++++
+
+// E. MIN-WIDTH: 1200px +++++++++++++++++++++++++++++++++
+
+@media ($lg-up) {
+}
+
+// E. END +++++++++++++++++++++++++++++++++++++++++++++++
+
+// END OF FILE ########################################################################################################

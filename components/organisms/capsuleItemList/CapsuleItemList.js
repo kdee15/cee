@@ -4,7 +4,6 @@ import classes from "./CapsuleItemList.module.scss";
 export default function CapsuleItemList(contentModule) {
   const { title, copy, backgroundImage, customClass, capsules } =
     contentModule.contentModule.fields;
-  console.log("contentModule", contentModule);
   return (
     <section className={`${classes.oCapsuleItemList} ${classes[customClass]}`}>
       {backgroundImage ? (
