@@ -11,11 +11,15 @@
 
 .oCarouselRegion {
   position: relative;
-  height: 60vh;
+  height: 70vh;
   overflow: hidden;
+  z-index: 0;
 }
 .oBottom {
-  height: 40vh;
+  height: 30vh;
+  position: relative;
+  z-index: 1;
+  background-color: white;
 }
 
 .mCopy {
@@ -33,6 +37,53 @@
   background-color: rgba(white, 0.2);
   padding: 100px 20px 80px;
   border-radius: 100% 100% 0 0;
+}
+
+.oOverlays {
+  .aCircleThin {
+    position: absolute;
+    top: 66vh;
+    left: 45vw;
+    z-index: 1;
+    width: 100%;
+    max-width: 55px;
+    path {
+      fill: $grey80;
+    }
+  }
+  .aCircle {
+    position: absolute;
+    top: 15vh;
+    right: 5vw;
+    z-index: 1;
+    width: 100%;
+    max-width: 90px;
+    path {
+      fill: $yellow;
+    }
+  }
+  .aCircleHalf {
+    position: absolute;
+    top: 20vh;
+    left: 0;
+    z-index: 1;
+    width: 100%;
+    max-width: 50px;
+    path {
+      fill: $green;
+    }
+  }
+  .aCircleQuarter {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    z-index: 1;
+    width: 100%;
+    max-width: 350px;
+    path {
+      fill: $orange;
+    }
+  }
 }
 
 // A. END +++++++++++++++++++++++++++++++++++++++++++++++

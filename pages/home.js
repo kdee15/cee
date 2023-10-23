@@ -1,6 +1,8 @@
 import { createClient } from "contentful";
 import Nav from "../components/molecules/nav/Nav";
 import HeroCarousel from "../components/organisms/heroCarousel/HeroCarousel";
+import TwoColumnText from "../components/organisms/twoColumnText/TwoColumnText";
+import CapsuleItemList from "../components/organisms/capsuleItemList/CapsuleItemList";
 const { C_SPACE_ID, C_DELIVERY_KEY } = require("../helpers/contentful-config");
 
 export async function getStaticProps(context) {
@@ -26,12 +28,19 @@ export async function getStaticProps(context) {
 }
 
 export default function Home({ Page }) {
-  const { 0: mainMenu, 1: heroBanner } = Page[0].fields.components;
+  const {
+    0: mainMenu,
+    1: heroBanner,
+    2: twoColumnText,
+    3: capsuleItemList,
+  } = Page[0].fields.components;
 
   return (
     <div className="anchor" id="top">
       <Nav contentModule={mainMenu} />
       <HeroCarousel contentModule={heroBanner} />
+      <TwoColumnText contentModule={twoColumnText} />
+      <CapsuleItemList contentModule={capsuleItemList} />
     </div>
   );
 }
