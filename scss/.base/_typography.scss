@@ -10,6 +10,14 @@ $font: "Quicksand", sans-serif;
 $exo: "Exo 2", sans-serif;
 $cormorant: "Cormorant", serif;
 
+@font-face {
+  font-family: Garet-Heavy;
+  src: url("../../fonts/garet/Garet-Heavy.ttf") format("truetype");
+  src: url("../../fonts/garet/Garet-Heavy.woff") format("woff");
+}
+
+$garetHeavy: "Garet-Heavy", sans-serif;
+
 // A.2. RESPONSIVE FONT VARIABLES -------------------------
 // font-size: calc([minimum size] + ([maximum size] - [minimum size]) * ((100vw - [minimum viewport width]) / ([maximum viewport width] - [minimum viewport width])));
 

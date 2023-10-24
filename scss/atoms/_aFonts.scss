@@ -56,9 +56,23 @@ fntH5 * {
   @include font(72);
 }
 
+.fnt38f,
+.fnt38f * {
+  @include font(38);
+}
+
 .fnt30f,
 .fnt30f * {
   @include font(30);
+}
+
+.fnt28f,
+.fnt28f * {
+  @include font(28);
+}
+.fnt21f,
+.fnt21f * {
+  @include font(21);
 }
 
 .fnt18f,

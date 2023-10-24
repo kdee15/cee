@@ -1,0 +1,68 @@
+// MOLECULE [ NAVIGATION ] ############################################################################################
+
+@import "scss/.base/module-index";
+
+// A. GLOBAL STYLES +++++++++++++++++++++++++++++++++++++
+
+.oTwoColumnTextBlock {
+  position: relative;
+  height: 100vh;
+  overflow: hidden;
+  .oContainer,
+  .oRow {
+    height: 100%;
+    background-color: pink;
+  }
+  &.oBigWhiteText {
+    * {
+      font-size: 32px;
+      text-shadow: 0 0 10px black;
+      color: white;
+    }
+    .oColLeft,
+    .oColRight {
+      font-family: $garetHeavy;
+      padding-top: 80px;
+      padding-bottom: 50px;
+    }
+  }
+}
+
+.oBackgroundImage {
+  @include position(absolute, 0);
+  background-position: center;
+  background-size: cover;
+  background-position: center;
+}
+
+// A. END +++++++++++++++++++++++++++++++++++++++++++++++
+
+// B. GRACEFUL DEGRADATION ++++++++++++++++++++++++++++++
+
+@media ($md-dn) {
+}
+
+// B. END +++++++++++++++++++++++++++++++++++++++++++++++
+
+// C. MIN-WIDTH: 768px ++++++++++++++++++++++++++++++++++
+
+@media ($md-up) {
+}
+
+// C. END +++++++++++++++++++++++++++++++++++++++++++++++
+
+// D. MIN-WIDTH: 992px ++++++++++++++++++++++++++++++++++
+
+@media ($md-up) {
+}
+
+// D. END +++++++++++++++++++++++++++++++++++++++++++++++
+
+// E. MIN-WIDTH: 1200px +++++++++++++++++++++++++++++++++
+
+@media ($lg-up) {
+}
+
+// E. END +++++++++++++++++++++++++++++++++++++++++++++++
+
+// END OF FILE ########################################################################################################
