@@ -19,15 +19,9 @@ export async function getStaticProps(context) {
 
     .then((entries) => entries.items);
 
-  const resMenu = await client.getEntries({
-    content_type: "componentMenu",
-    include: 10,
-  });
-
   return {
     props: {
       Page: resPage,
-      MainMenu: resMenu.items[0].fields,
     },
     revalidate: 1,
   };
@@ -35,9 +29,10 @@ export async function getStaticProps(context) {
 
 export default function PageAboutUs({ Page, MainMenu }) {
   const home = Page[0].fields;
+  const { 0: pageMenu } = Page[0].fields.components;
   return (
     <div className="anchor" id="top">
-      <Nav contentModule={MainMenu} />
+      <Nav contentModule={pageMenu} />
       <h1>{home.title}</h1>
     </div>
   );
