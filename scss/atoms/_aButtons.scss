@@ -7,7 +7,7 @@
 $btn-clr: $yellow;
 $btn-clr-2: $black;
 $btn-border-color: transparent;
-$buttonFont: $font;
+$buttonFont: $garetHeavy;
 $buttonFontWeight: 500;
 $buttonFontSize: 15px;
 $buttonLineHeight: normal;
@@ -94,8 +94,8 @@ $radius-lrg: 50px;
   // A.1.2. HOLLOW BLUE BUTTON ----------------------------
 
   &.btnAlt {
-    color: $btn-clr;
-    background-color: $btn-clr-2;
+    color: $black;
+    background-color: $orange;
     border-color: $btn-clr-2;
     // Active styles
     &.focus,

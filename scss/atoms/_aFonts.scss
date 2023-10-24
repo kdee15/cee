@@ -70,6 +70,10 @@ fntH5 * {
 .fnt28f * {
   @include font(28);
 }
+.fnt21f,
+.fnt21f * {
+  @include font(21);
+}
 
 .fnt18f,
 .fnt18f * {

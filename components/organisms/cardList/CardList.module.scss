@@ -21,6 +21,9 @@
   justify-content: center;
   width: 100%;
   gap: 20px;
+  z-index: 2;
+  position: relative;
+
   .mCard {
     text-align: center;
     flex: 1 1;
@@ -51,13 +54,55 @@
     }
     .mImage {
       aspect-ratio: 1/1;
-      border-radius: 50px;
+      border-radius: 80px;
       background-size: cover;
       background-position: center;
     }
     .aTitle {
       margin-top: 20px;
       font-family: $garetHeavy;
+    }
+  }
+}
+
+.oCtaRegion {
+  text-align: center;
+  margin-top: 50px;
+}
+
+.oOverlays {
+  .aCircleThin {
+    position: absolute;
+    top: 70vh;
+    left: 5vw;
+    z-index: 1;
+    width: 100%;
+    max-width: 55px;
+    path {
+      fill: $grey80;
+    }
+  }
+  .aCircle {
+    position: absolute;
+    bottom: 2vh;
+    right: 5vw;
+    z-index: 1;
+    width: 100%;
+    max-width: 90px;
+    path {
+      fill: $yellow;
+    }
+  }
+  .aCircleHalf {
+    position: absolute;
+    top: 0vh;
+    right: 0;
+    z-index: 0;
+    width: 100%;
+    max-width: 240px;
+    transform: rotate(180deg);
+    path {
+      fill: $orange;
     }
   }
 }
