@@ -13,6 +13,7 @@ export default function ComponentFooter(contentModule) {
     contactCopy,
     quickLinks,
     copyrightText,
+    hasOverlay,
   } = contentModule.contentModule;
   return (
     <section className={classes.oFooter}>
@@ -124,6 +125,66 @@ export default function ComponentFooter(contentModule) {
           </div>
         </div>
       </div>
+      {hasOverlay ? (
+        <div className={classes.oOverlays}>
+          <span>
+            <svg
+              x="0px"
+              y="0px"
+              viewBox="0 0 287.3 286.9"
+              style={{ enableBackground: `new 0 0 287.3 286.9` }}
+              className={classes.aCircleThin}
+            >
+              <path
+                d="M143.5,0C64.2,0,0,64.2,0,143.5S64.2,287,143.5,287S287,222.8,287,143.5S222.8,0,143.5,0z M143.5,264.3
+	c-66.7,0-120.8-54.1-120.8-120.8S76.8,22.7,143.5,22.7s120.8,54.1,120.8,120.8S210.2,264.3,143.5,264.3z"
+              />
+            </svg>
+          </span>
+          <span>
+            <svg
+              x="0px"
+              y="0px"
+              viewBox="0 0 287.3 286.9"
+              style={{ enableBackground: `new 0 0 287.3 286.9` }}
+              className={classes.aCircle}
+            >
+              <path
+                d="M143.5,0C64.2,0,0,64.2,0,143.5S64.2,287,143.5,287S287,222.8,287,143.5S222.8,0,143.5,0z M144,251.3
+	c-59.8,0-108.3-48.5-108.3-108.3S84.2,34.7,144,34.7S252.3,83.2,252.3,143S203.8,251.3,144,251.3z"
+              />
+            </svg>
+          </span>
+          <span>
+            <svg
+              x="0px"
+              y="0px"
+              viewBox="0 0 83 255.5"
+              style={{ enableBackground: `new 0 0 83 255.5` }}
+              className={classes.aCircleSliver}
+            >
+              <path
+                d="M83,39V0C32.8,34.9,0,92.9,0,158.6c0,35.6,9.6,68.9,26.4,97.5H63c-20.4-27.2-32.5-60.9-32.5-97.5
+	C30.5,111.3,50.7,68.7,83,39z"
+              />
+            </svg>
+          </span>
+          <span>
+            <svg
+              x="0px"
+              y="0px"
+              viewBox="0 0 264.3 289.9"
+              style={{ enableBackground: `new 0 0 264.3 289.9` }}
+              className={classes.aCircleQuarter}
+            >
+              <path
+                d="M263.5,13.3C241.7,4.7,217.9,0,193,0C86.4,0,0,86.4,0,193c0,35.6,9.6,68.9,26.4,97.5H63c-20.4-27.2-32.5-60.9-32.5-97.5
+	c0-89.7,72.8-162.5,162.5-162.5c25.3,0,49.2,5.8,70.5,16V13.3z"
+              />
+            </svg>
+          </span>
+        </div>
+      ) : null}
     </section>
   );
 }
