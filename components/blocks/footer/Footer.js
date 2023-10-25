@@ -81,7 +81,9 @@ export default function ComponentFooter(contentModule) {
             <h3 className={`${classes.aTitle} fnt18f`}>
               {contactCopy.fields.title}
             </h3>
-            <div>{documentToReactComponents(contactCopy.fields.copy)}</div>
+            <div className={`${classes.mCopy} ${classes.contactCopy} fnt12`}>
+              {documentToReactComponents(contactCopy.fields.copy)}
+            </div>
           </div>
           <div className={`${classes.oCol}  col-12 col-md`}>
             <h3 className={`${classes.aTitle} fnt18f`}>
