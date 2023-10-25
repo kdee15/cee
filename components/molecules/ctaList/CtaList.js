@@ -6,7 +6,7 @@ export default function CtaList(contentModule) {
 
   return (
     <section className={classes.mCtaList}>
-      {ctaRegion.map((item, index) => (
+      {ctaRegion?.map((item, index) => (
         <Link key={index} href={item.fields.url}>
           <a
             className={`${classes[item.fields.customClass]} ${[

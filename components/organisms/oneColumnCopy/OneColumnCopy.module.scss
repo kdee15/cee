@@ -1,0 +1,72 @@
+// ORGANISM [ ONE COLUMN COPY ] #######################################################################################
+
+@import "scss/.base/module-index";
+
+// A. GLOBAL STYLES +++++++++++++++++++++++++++++++++++++
+
+.oOneColumnCopy {
+  &.aboutVision {
+    position: relative;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    color: $orange;
+
+    .oCopy {
+      max-width: 900px;
+      margin: 0 auto 60px;
+      .aTitle {
+        margin-bottom: 30px;
+      }
+    }
+  }
+}
+
+.oOverlays {
+  .aCircleHalf {
+    position: absolute;
+    top: 20vh;
+    left: 0;
+    z-index: 1;
+    width: 100%;
+    max-width: 50px;
+    path {
+      fill: $green;
+    }
+  }
+}
+
+// A. END +++++++++++++++++++++++++++++++++++++++++++++++
+
+// B. GRACEFUL DEGRADATION ++++++++++++++++++++++++++++++
+
+@media ($md-dn) {
+}
+
+// B. END +++++++++++++++++++++++++++++++++++++++++++++++
+
+// C. MIN-WIDTH: 768px ++++++++++++++++++++++++++++++++++
+
+@media ($md-up) {
+}
+
+// C. END +++++++++++++++++++++++++++++++++++++++++++++++
+
+// D. MIN-WIDTH: 992px ++++++++++++++++++++++++++++++++++
+
+@media ($md-up) {
+}
+
+// D. END +++++++++++++++++++++++++++++++++++++++++++++++
+
+// E. MIN-WIDTH: 1200px +++++++++++++++++++++++++++++++++
+
+@media ($lg-up) {
+}
+
+// E. END +++++++++++++++++++++++++++++++++++++++++++++++
+
+// END OF FILE ########################################################################################################

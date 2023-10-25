@@ -10,12 +10,12 @@ export default function HeroCarousel(props) {
    */
   if (!props) return null;
 
-  const { title, copy, hasOverlay } = props.contentModule.fields;
+  const { title, copy, hasOverlay, customClass } = props.contentModule.fields;
   const CarouselImages = props.contentModule.fields.imageCarousel.fields.images;
   const ctaList = props.contentModule.fields;
 
   return (
-    <div className={`${classes.oHeroCarouselBanner}`}>
+    <div className={`${classes.oHeroCarouselBanner} ${classes[customClass]}`}>
       <div className={`${classes.oCarouselRegion}`}>
         <ImageCarousel contentModule={CarouselImages} />
         <div className={classes.mTitle}>

@@ -4,7 +4,6 @@ import { documentToReactComponents } from "@contentful/rich-text-react-renderer"
 import classes from "./Footer.module.scss";
 
 export default function ComponentFooter(contentModule) {
-  console.log("footer", contentModule);
   const {
     title,
     logo,
