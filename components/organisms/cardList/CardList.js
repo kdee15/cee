@@ -5,7 +5,6 @@ import Link from "next/dist/client/link";
 export default function CardList(contentModule) {
   const { title, cards, buttonLabel, url, hasOverlay, customClass } =
     contentModule.contentModule.fields;
-  console.log("contentModule", contentModule);
   return (
     <section className={`${classes.oCardList} ${classes[customClass]}`}>
       <div className={`${classes.oContainer} container`}>

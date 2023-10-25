@@ -1,0 +1,83 @@
+// MOLECULE [ NAVIGATION ] ############################################################################################
+
+@import "scss/.base/module-index";
+
+// A. GLOBAL STYLES +++++++++++++++++++++++++++++++++++++
+
+.oFooter {
+  padding: 50px 0 100px;
+}
+
+.mLogo {
+  max-width: 240px;
+  margin-bottom: 40px;
+}
+
+.mLogoCopy {
+  margin: 0 auto 40px;
+}
+
+.aTitle {
+  text-align: center;
+  margin-bottom: 20px;
+  &.socialMedia {
+    text-align: left;
+  }
+}
+
+.mFooterNav {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  &.socialMedia {
+    li {
+      display: inline-block;
+      width: 60px;
+      height: 60px;
+      margin-right: 20px;
+
+      .aImage {
+        display: block;
+        width: 60px;
+        height: 60px;
+      }
+    }
+  }
+}
+
+.copyright {
+  text-align: center;
+  margin-top: 50px;
+}
+
+// A. END +++++++++++++++++++++++++++++++++++++++++++++++
+
+// B. GRACEFUL DEGRADATION ++++++++++++++++++++++++++++++
+
+@media ($md-dn) {
+}
+
+// B. END +++++++++++++++++++++++++++++++++++++++++++++++
+
+// C. MIN-WIDTH: 768px ++++++++++++++++++++++++++++++++++
+
+@media ($md-up) {
+}
+
+// C. END +++++++++++++++++++++++++++++++++++++++++++++++
+
+// D. MIN-WIDTH: 992px ++++++++++++++++++++++++++++++++++
+
+@media ($md-up) {
+}
+
+// D. END +++++++++++++++++++++++++++++++++++++++++++++++
+
+// E. MIN-WIDTH: 1200px +++++++++++++++++++++++++++++++++
+
+@media ($lg-up) {
+}
+
+// E. END +++++++++++++++++++++++++++++++++++++++++++++++
+
+// END OF FILE ########################################################################################################
