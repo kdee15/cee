@@ -4,6 +4,8 @@ import ComponentFooter from "../../components/blocks/footer/Footer";
 import HeroCarousel from "../../components/organisms/heroCarousel/HeroCarousel";
 import OneColumnCopy from "../../components/organisms/oneColumnCopy/OneColumnCopy";
 import CardList from "../../components/organisms/cardList/CardList";
+import TestimonialsCarousel from "../../components/organisms/testimonialsCarousel/TestimonialsCarousel";
+import SignUp from "../../components/organisms/signup/SignUp";
 const {
   C_SPACE_ID,
   C_DELIVERY_KEY,
@@ -45,6 +47,7 @@ export default function PageAboutUs({ Page, Footer }) {
     2: visionMission,
     3: teamChangeMakers,
     4: visionaries,
+    5: testimonials,
   } = Page[0].fields.components;
   console.log("aboutPage", Page);
   return (
@@ -54,6 +57,8 @@ export default function PageAboutUs({ Page, Footer }) {
       <OneColumnCopy contentModule={visionMission} />
       <CardList contentModule={teamChangeMakers} />
       <CardList contentModule={visionaries} />
+      <SignUp />
+      <TestimonialsCarousel contentModule={testimonials} />
       <ComponentFooter contentModule={Footer} />
     </div>
   );
