@@ -4,105 +4,61 @@
 
 // A. GLOBAL STYLES +++++++++++++++++++++++++++++++++++++
 
-.oCardList {
+.oSignUp {
+  padding: 50px 20px;
   position: relative;
-  height: 100vh;
-  overflow: hidden;
-  background-color: #e4e4e4;
-}
-
-.aBlockTitle {
-  text-align: center;
-  margin: 100px auto 50px;
-}
-
-.oCards {
-  display: flex;
-  justify-content: center;
-  width: 100%;
-  gap: 20px;
-  z-index: 2;
-  position: relative;
-
-  .mCard {
+  background-color: white;
+  border-bottom: 2px solid $peach;
+  margin-bottom: 40px;
+  .aBlockTitle {
     text-align: center;
-    flex: 1 1;
-    max-width: 350px;
-    &.green {
-      .mImage {
-        border: 10px solid $green;
+    margin-bottom: 20px;
+  }
+  .oForm {
+    width: 100%;
+    max-width: 980px;
+    margin: 0 auto;
+    background-color: $orange;
+    border-radius: 40px;
+    padding: 30px 50px;
+    display: flex;
+    gap: 30px;
+    align-items: center;
+
+    .mInput {
+      width: 40%;
+      .aInput {
+        width: 100%;
+        height: 60px;
+        padding-left: 20px;
+        font-family: $garetHeavy;
       }
-      .aTitle {
-        color: $green;
-      }
-    }
-    &.yellow {
-      .mImage {
-        border: 10px solid $yellow;
-      }
-      .aTitle {
-        color: $yellow;
-      }
-    }
-    &.orange {
-      .mImage {
-        border: 10px solid $orange;
-      }
-      .aTitle {
-        color: $orange;
-      }
-    }
-    .mImage {
-      aspect-ratio: 1/1;
-      border-radius: 80px;
-      background-size: cover;
-      background-position: center;
-    }
-    .aTitle {
-      margin-top: 20px;
-      font-family: $garetHeavy;
     }
   }
-}
-
-.oCtaRegion {
-  text-align: center;
-  margin-top: 50px;
 }
 
 .oOverlays {
   .aCircleThin {
     position: absolute;
-    top: 70vh;
-    left: 5vw;
+    bottom: -3vh;
+    right: 2vw;
     z-index: 1;
     width: 100%;
     max-width: 55px;
     path {
-      fill: $grey80;
-    }
-  }
-  .aCircle {
-    position: absolute;
-    bottom: 2vh;
-    right: 5vw;
-    z-index: 1;
-    width: 100%;
-    max-width: 90px;
-    path {
       fill: $yellow;
     }
   }
-  .aCircleHalf {
+  .aCircleQuarter {
     position: absolute;
-    top: 0vh;
-    right: 0;
-    z-index: 0;
+    top: 0;
+    left: 0;
+    z-index: 1;
     width: 100%;
-    max-width: 240px;
+    max-width: 60px;
     transform: rotate(180deg);
     path {
-      fill: $orange;
+      fill: $green;
     }
   }
 }
