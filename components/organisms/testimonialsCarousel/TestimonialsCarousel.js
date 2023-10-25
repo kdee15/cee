@@ -17,8 +17,8 @@ export default function TestimonialsCarousel({ contentModule }) {
   return (
     <div className={`${classes.oCarouselTestimonials}`}>
       <Slider {...settings}>
-        {contentModule.fields.cards?.map((card) => {
-          return <TestimonialCarouselCard key={card.id} {...card} />;
+        {contentModule.fields.cards?.map((card, index) => {
+          return <TestimonialCarouselCard key={index} {...card} />;
         })}
       </Slider>
       <style global jsx>{`

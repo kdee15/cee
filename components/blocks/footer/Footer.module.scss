@@ -5,7 +5,9 @@
 // A. GLOBAL STYLES +++++++++++++++++++++++++++++++++++++
 
 .oFooter {
-  padding: 50px 0 100px;
+  position: relative;
+  padding: 150px 0 200px;
+  overflow: hidden;
 }
 
 .mLogo {
@@ -20,6 +22,7 @@
 .aTitle {
   text-align: center;
   margin-bottom: 20px;
+  font-family: $garetHeavy;
   &.socialMedia {
     text-align: left;
   }
@@ -48,6 +51,54 @@
 .copyright {
   text-align: center;
   margin-top: 50px;
+}
+
+.oOverlays {
+  .aCircleThin {
+    position: absolute;
+    bottom: -6vh;
+    left: 30vw;
+    z-index: 1;
+    width: 100%;
+    max-width: 120px;
+    path {
+      fill: $grey80;
+    }
+  }
+  .aCircle {
+    position: absolute;
+    top: 15vh;
+    right: -2vw;
+    z-index: 1;
+    width: 100%;
+    max-width: 90px;
+    path {
+      fill: $yellow;
+    }
+  }
+  .aCircleQuarter {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    width: 100%;
+    max-width: 60px;
+    transform: rotate(180deg);
+    path {
+      fill: $green;
+    }
+  }
+  .aCircleSliver {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    z-index: 1;
+    width: 100%;
+    max-width: 100px;
+    path {
+      fill: $orange;
+    }
+  }
 }
 
 // A. END +++++++++++++++++++++++++++++++++++++++++++++++
