@@ -23,6 +23,8 @@
   gap: 20px;
   z-index: 2;
   position: relative;
+  max-width: 1440px;
+  margin: 0 auto;
 
   .mCard {
     text-align: center;
@@ -61,6 +63,74 @@
     .aTitle {
       margin-top: 20px;
       font-family: $garetHeavy;
+    }
+  }
+}
+
+.oCardList {
+  &.oWhatWeDo {
+    gap: 80px;
+  }
+  &.oChangeMakers {
+    background-color: white;
+    .aBlockTitle {
+      color: $yellow;
+      font-family: $garetHeavy;
+    }
+    .oCards {
+      justify-content: flex-start;
+      gap: 1%;
+      flex-wrap: wrap;
+      .mCard {
+        &.mOneQuarter {
+          flex: 1 1 25%;
+          max-width: 24%;
+          .mImage {
+            max-width: 165px;
+            margin: 0 auto 20px;
+            border: 15px solid $yellow;
+          }
+          .mBody {
+            color: $yellow;
+            font-family: $garetHeavy;
+            margin-bottom: 40px;
+            .aTitle {
+              margin: 0;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  &.oBoard {
+    .aBlockTitle {
+      color: $green;
+      font-family: $garetHeavy;
+    }
+    .oCards {
+      justify-content: flex-start;
+      gap: 1%;
+      flex-wrap: wrap;
+      .mCard {
+        &.mOneQuarter {
+          flex: 1 1 25%;
+          max-width: 24%;
+          .mImage {
+            max-width: 165px;
+            margin: 0 auto 20px;
+            border: 15px solid $green;
+          }
+          .mBody {
+            color: $green;
+            font-family: $garetHeavy;
+            margin-bottom: 40px;
+            .aTitle {
+              margin: 0;
+            }
+          }
+        }
+      }
     }
   }
 }

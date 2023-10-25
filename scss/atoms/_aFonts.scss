@@ -70,6 +70,12 @@ fntH5 * {
 .fnt28f * {
   @include font(28);
 }
+
+.fnt25,
+.fnt25 * {
+  @include scaledFont(18, 25, 25, 22, 27, 27);
+}
+
 .fnt21f,
 .fnt21f * {
   @include font(21);

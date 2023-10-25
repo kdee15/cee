@@ -12,7 +12,7 @@ export default function CardList(contentModule) {
           <h2 className={`${classes.aBlockTitle} fntH2`}>{title}</h2>
         </div>
       </div>
-      <div className={classes.oCards}>
+      <div className={`${classes.oCards}`}>
         {cards.map((item, index) => (
           <div
             key={index}
@@ -24,19 +24,28 @@ export default function CardList(contentModule) {
                 backgroundImage: `url(http:${item.fields.image.fields.file.url})`,
               }}
             ></figure>
-            <div className={`${classes.aTitle} fnt18f`}>
-              {item.fields.title}
+            <div className={classes.mBody}>
+              <div className={`${classes.aTitle} fnt18f`}>
+                {item.fields.title}
+              </div>
+              {item.fields.copy && (
+                <div className={`${classes.mCopy} fnt18f`}>
+                  {documentToReactComponents(item.fields.copy)}
+                </div>
+              )}
             </div>
           </div>
         ))}
       </div>
-      <div className={`${classes.oCtaRegion}`}>
-        <Link href={url}>
-          <a className="aBtn btnAlt">
-            <span className="fnt21f">{buttonLabel}</span>
-          </a>
-        </Link>
-      </div>
+      {url && (
+        <div className={`${classes.oCtaRegion}`}>
+          <Link href={url}>
+            <a className="aBtn btnAlt">
+              <span className="fnt21f">{buttonLabel}</span>
+            </a>
+          </Link>
+        </div>
+      )}
       {hasOverlay ? (
         <div className={classes.oOverlays}>
           <span>

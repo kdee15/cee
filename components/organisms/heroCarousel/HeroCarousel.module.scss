@@ -86,6 +86,21 @@
   }
 }
 
+.oHeroCarouselBanner {
+  &.oBannerAbout {
+    .oBottom {
+      background-color: $orange;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      * {
+        color: white;
+        font-size: 30px;
+      }
+    }
+  }
+}
+
 // A. END +++++++++++++++++++++++++++++++++++++++++++++++
 
 // B. GRACEFUL DEGRADATION ++++++++++++++++++++++++++++++
