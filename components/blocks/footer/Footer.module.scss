@@ -46,6 +46,30 @@
       }
     }
   }
+  &.quickLinks {
+    li {
+      a {
+        margin-bottom: 7px;
+        display: block;
+        color: $black;
+        text-decoration: none;
+        font-weight: 600;
+        &:hover {
+          color: $grey80;
+        }
+      }
+    }
+  }
+}
+
+.mCopy {
+  &.contactCopy {
+    max-width: 300px;
+    margin: 0 auto;
+    hr {
+      margin: 30px auto;
+    }
+  }
 }
 
 .copyright {
