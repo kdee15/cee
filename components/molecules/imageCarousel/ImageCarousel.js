@@ -14,21 +14,21 @@ function ImageCarousel({ contentModule }) {
     autoplaySpeed: 2000,
   };
 
+  console.log("carra", contentModule);
+
   return (
-    <figure>
-      <Slider {...settings}>
-        {contentModule.map((item, index) => (
-          <figure key={index} className={`${classes.mCarouselImage}`}>
-            <div
-              className={`${classes.aImage}`}
-              style={{
-                backgroundImage: `url(http:${item.fields.file.url})`,
-              }}
-            ></div>
-          </figure>
-        ))}
-      </Slider>
-    </figure>
+    <Slider {...settings}>
+      {contentModule.map((item, index) => (
+        <figure key={index} className={`${classes.mCarouselImage}`}>
+          <div
+            className={`${classes.aImage}`}
+            style={{
+              backgroundImage: `url(http:${item.fields.file.url})`,
+            }}
+          ></div>
+        </figure>
+      ))}
+    </Slider>
   );
 }
 

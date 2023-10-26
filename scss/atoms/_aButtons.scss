@@ -25,6 +25,7 @@ $radius-lrg: 50px;
 
 // A.1. DEFAULT BUTTON ------------------------------------
 
+.aBtnAlt,
 .aBtn {
   display: inline-block;
   padding: 15px 25px;
@@ -113,6 +114,15 @@ $radius-lrg: 50px;
 
   // A.1.2. END : HOLLOW BLUE BUTTON ----------------------
 }
+
+// A.1. END : DEFAULT BUTTON ------------------------------
+
+.aBtnAlt {
+  color: $black;
+  background-color: $green;
+}
+
+// A.1. END : DEFAULT BUTTON ------------------------------
 
 // A.1. END : DEFAULT BUTTON ------------------------------
 

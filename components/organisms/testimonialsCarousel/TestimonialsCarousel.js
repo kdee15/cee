@@ -6,12 +6,12 @@ export default function TestimonialsCarousel({ contentModule }) {
   const settings = {
     dots: false,
     infinite: true,
-    speed: 750,
+    speed: 1000,
     slidesToShow: 1,
     slidesToScroll: 1,
     arrows: false,
-    autoplay: false,
-    autoplaySpeed: 2000,
+    autoplay: true,
+    autoplaySpeed: 8000,
   };
 
   return (

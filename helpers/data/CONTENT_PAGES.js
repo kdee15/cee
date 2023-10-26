@@ -51,51 +51,47 @@ query GetElements
 }
 `;
 
-export const PROJECT_CONTENT = `
-  query GetProject($slug: String!) {
-    pageContentCollection(where: { slug: $slug }, limit: 1) {
+export const NEWS_CONTENT = `
+  query GetNews($slug: String!) {
+    pagePageCollection(where: { slug: $slug }, limit: 1) {
       items {
         title
         slug
-        componentsCollection {
-          items {
-            __typename
-          }
+        copy {
+          json
         }
-      }
-    }
-  }
-`;
-
-export const PROJECT_SLUG = `
-query {
-  pageContentCollection {
-      items {
-        slug
-      }
-    }
-}
-`;
-
-export const PROJECT_LIST = `
-query GetHome {
-  pageContentCollection {
-    items {
-        title
-        slug
-        ... on PageProjects {
+        hasHeroBanner
+        image {
           title
-          isFeatured
-          previewImageDesktop {
-            title
-            url
-            width
-            height
-          }
+          url
+          width
+          height
         }
-
+        customClass
+      }
     }
   }
+`;
 
+export const NEWS_SLUG = `
+query {
+  pagePageCollection{
+    items {
+      title
+      slug
+    }
+  }
 }
+`;
+
+export const NEWS_PAGE = `
+query GetNewsIndex($id: String!)  {
+  pageContent ({id: $id})  {
+    title
+    slug
+    sys {
+      id
+    }
+  }
+ }
 `;

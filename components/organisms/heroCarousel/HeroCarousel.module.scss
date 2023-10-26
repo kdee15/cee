@@ -101,6 +101,52 @@
   }
 }
 
+.oHeroCarouselBanner {
+  &.oBannerDonate {
+    .oCarouselRegion {
+      height: auto;
+      min-height: 100vh;
+    }
+    .oBottom {
+      @include vertical-align(absolute);
+      right: 0;
+      padding: 20px 50px 50px;
+      background-color: $yellow;
+      z-index: 10;
+      .aBtn {
+        background-color: $green !important;
+      }
+    }
+    .oOverlays {
+      .aCircleThin {
+        top: auto;
+        bottom: 4vh;
+        left: 35vw;
+        max-width: 55px;
+        path {
+          fill: $orange;
+        }
+      }
+      .aCircle {
+        top: 15vh;
+        left: 5vw;
+        max-width: 90px;
+        path {
+          fill: $yellow;
+        }
+      }
+      .aCircleHalf {
+        display: none;
+      }
+      .aCircleQuarter {
+        path {
+          fill: $teal;
+        }
+      }
+    }
+  }
+}
+
 // A. END +++++++++++++++++++++++++++++++++++++++++++++++
 
 // B. GRACEFUL DEGRADATION ++++++++++++++++++++++++++++++

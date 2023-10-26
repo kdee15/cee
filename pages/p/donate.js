@@ -6,6 +6,7 @@ import OneColumnCopy from "../../components/organisms/oneColumnCopy/OneColumnCop
 import CardList from "../../components/organisms/cardList/CardList";
 import TestimonialsCarousel from "../../components/organisms/testimonialsCarousel/TestimonialsCarousel";
 import SignUp from "../../components/organisms/signup/SignUp";
+import DonateForm from "../../components/blocks/donateForm/DonateForm";
 const {
   C_SPACE_ID,
   C_DELIVERY_KEY,
@@ -39,24 +40,13 @@ export async function getStaticProps(context) {
   };
 }
 
-export default function PageAboutUs({ Page, Footer }) {
-  const {
-    0: pageMenu,
-    1: pageBanner,
-    2: visionMission,
-    3: teamChangeMakers,
-    4: visionaries,
-    5: testimonials,
-  } = Page[1].fields.components;
+export default function PageDonate({ Page, Footer }) {
+  const { 0: pageMenu, 1: pageBanner } = Page[0].fields.components;
   return (
     <div className="anchor" id="top">
       <Nav contentModule={pageMenu} />
       <HeroCarousel contentModule={pageBanner} />
-      <OneColumnCopy contentModule={visionMission} />
-      <CardList contentModule={teamChangeMakers} />
-      <CardList contentModule={visionaries} />
-      <SignUp />
-      <TestimonialsCarousel contentModule={testimonials} />
+      <DonateForm />
       <ComponentFooter contentModule={Footer} />
     </div>
   );
