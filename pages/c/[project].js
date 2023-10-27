@@ -16,8 +16,14 @@ const { NEWS_CONTENT, NEWS_SLUG } = require("../../helpers/data/CONTENT_PAGES");
 export default function Project({ project }) {
   console.log("PAGES", project);
   return (
-    <div className={classes.oProjectPage}>
-      <h1>{project.title}</h1>
+    <div className={classes.oPage}>
+      <div className={`${classes.oContainer} container`}>
+        <div className={`${classes.oRow} row`}>
+          <div className={`${classes.oCol} col`}>
+            <h1>{project.title}</h1>
+          </div>
+        </div>
+      </div>
     </div>
   );
 }
