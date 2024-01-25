@@ -23,6 +23,9 @@ export default function Project({ project }) {
             <h1>{project.title}</h1>
           </div>
         </div>
+        <div className={`${classes.oRow} row`}>
+          <div className={`${classes.oCol} col`}></div>
+        </div>
       </div>
     </div>
   );
