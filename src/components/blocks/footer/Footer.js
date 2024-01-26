@@ -12,6 +12,7 @@ export default function ComponentFooter(contentModule) {
     contactCopy,
     quickLinks,
     copyrightText,
+    image,
     hasOverlay,
   } = contentModule.contentModule;
   return (
@@ -115,10 +116,15 @@ export default function ComponentFooter(contentModule) {
               ))}
             </ul>
           </div>
-          <div className={`${classes.oCol} ${classes.copyright} col-12`}>
-            {copyrightText}
-          </div>
         </div>
+      </div>
+      <div
+        className={`${classes.aBackgroundImage}`}
+        style={{
+          backgroundImage: `url(http:${image.fields.file.url})`,
+        }}
+      >
+        <div className={`${classes.copyright}`}>{copyrightText}</div>
       </div>
       {hasOverlay ? (
         <div className={classes.oOverlays}>

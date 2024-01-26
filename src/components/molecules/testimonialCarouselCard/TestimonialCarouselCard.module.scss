@@ -8,11 +8,15 @@
   &.testimonials {
     display: flex;
     flex-direction: row;
+    max-width: 65%;
+    margin: 0 auto;
+    padding: 50px 0;
     .oImage {
-      flex: 1 1 50%;
+      flex: 1 1 35%;
       padding-right: 50px;
       .aImage {
-        aspect-ratio: 1/0.7;
+        aspect-ratio: 1/1.25;
+        max-width: 400px;
         background-size: cover;
         background-position: center;
         background-repeat: no-repeat;
@@ -24,19 +28,23 @@
       padding-right: 80px;
       text-align: center;
       align-self: center;
-      .aTitle {
-        color: black;
-        margin-bottom: 40px;
-      }
+
       .mCopy {
+        font-family: $garet;
         p {
-          color: black;
+          color: white;
           margin-bottom: 15px;
           &:last-child {
             margin-bottom: 0;
           }
         }
       }
+    }
+    .aTitle {
+      color: white;
+      font-family: $garetHeavy;
+      margin: 20px auto;
+      text-align: center;
     }
   }
 }

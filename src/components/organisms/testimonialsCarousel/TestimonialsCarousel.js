@@ -3,20 +3,20 @@ import TestimonialCarouselCard from "../../molecules/testimonialCarouselCard/Tes
 import classes from "./TestimonialsCarousel.module.scss";
 
 export default function TestimonialsCarousel({ contentModule }) {
-  const settings = {
+  const settingsTestimonials = {
     dots: false,
     infinite: true,
-    speed: 750,
+    speed: 2000,
     slidesToShow: 1,
     slidesToScroll: 1,
-    arrows: false,
-    autoplay: false,
-    autoplaySpeed: 2000,
+    arrows: true,
+    autoplay: true,
+    autoplaySpeed: 6000,
   };
 
   return (
     <div className={`${classes.oCarouselTestimonials}`}>
-      <Slider {...settings}>
+      <Slider {...settingsTestimonials}>
         {contentModule.fields.cards?.map((card, index) => {
           return <TestimonialCarouselCard key={index} {...card} />;
         })}

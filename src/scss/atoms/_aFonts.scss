@@ -110,6 +110,10 @@ fntH5 * {
   @include scaledFont(12, 16, 16, 12, 16, 16);
 }
 
+.fnt15f,
+.fnt15f * {
+  @include font(15);
+}
 p,
 p *,
 .fnt14,
