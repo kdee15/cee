@@ -6,9 +6,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Exo+2:wght@600;700;800;900&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Cormorant:wght@300;400;500&display=swap");
 
-$font: "Quicksand", sans-serif;
-$exo: "Exo 2", sans-serif;
-$cormorant: "Cormorant", serif;
+$font: "Garet", sans-serif;
 
 @font-face {
   font-family: Garet-Heavy;
@@ -17,6 +15,14 @@ $cormorant: "Cormorant", serif;
 }
 
 $garetHeavy: "Garet-Heavy", sans-serif;
+
+@font-face {
+  font-family: Garet;
+  src: url("../../fonts/garet/Garet-Book.ttf") format("truetype");
+  src: url("../../fonts/garet/Garet-Book.woff") format("woff");
+}
+
+$garet: "Garet", sans-serif;
 
 // A.2. RESPONSIVE FONT VARIABLES -------------------------
 // font-size: calc([minimum size] + ([maximum size] - [minimum size]) * ((100vw - [minimum viewport width]) / ([maximum viewport width] - [minimum viewport width])));

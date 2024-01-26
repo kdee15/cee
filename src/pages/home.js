@@ -7,6 +7,8 @@ import CardList from "../components/organisms/cardList/CardList";
 import TestimonialsCarousel from "../components/organisms/testimonialsCarousel/TestimonialsCarousel";
 import SignUp from "../components/organisms/signup/SignUp";
 import ComponentFooter from "../components/blocks/footer/Footer";
+import HeroBanner from "../components/organisms/heroBanner/HeroBanner";
+import TwoColumnCopyImage from "../components/organisms/twoColumnCopyImage/TwoColumnCopyImage";
 const { C_SPACE_ID, C_DELIVERY_KEY } = require("../helpers/contentful-config");
 
 export async function getStaticProps(context) {
@@ -41,19 +43,20 @@ export default function Home({ Page, Footer }) {
   const {
     0: mainMenu,
     1: heroBanner,
-    2: twoColumnText,
-    3: capsuleItemList,
-    4: whatWeDo,
-    5: testimonials,
+    2: whatWeDo,
+    3: unlockCreativity,
+    4: twoColumnText,
+    5: capsuleItemList,
+    6: testimonials,
   } = Page[0].fields.components;
 
   return (
     <div className="anchor" id="top">
       <Nav contentModule={mainMenu} />
-      <HeroCarousel contentModule={heroBanner} />
-      <TwoColumnText contentModule={twoColumnText} />
-      <CapsuleItemList contentModule={capsuleItemList} />
+      <HeroBanner contentModule={heroBanner} />
       <CardList contentModule={whatWeDo} />
+      <TwoColumnCopyImage contentModule={unlockCreativity} />
+      <CapsuleItemList contentModule={capsuleItemList} />
       <SignUp />
       <TestimonialsCarousel contentModule={testimonials} />
       <ComponentFooter contentModule={Footer} />

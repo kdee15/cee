@@ -8,9 +8,11 @@ export default function CardList(contentModule) {
   return (
     <section className={`${classes.oCardList} ${classes[customClass]}`}>
       <div className={`${classes.oContainer} container`}>
-        <div className={`${classes.oRow} row`}>
-          <h2 className={`${classes.aBlockTitle} fntH2`}>{title}</h2>
-        </div>
+        {title ? (
+          <div className={`${classes.oRow} row`}>
+            <h2 className={`${classes.aBlockTitle} fntH2`}>{title}</h2>
+          </div>
+        ) : null}
       </div>
       <div className={`${classes.oCards}`}>
         {cards.map((item, index) => (
@@ -37,13 +39,13 @@ export default function CardList(contentModule) {
           </div>
         ))}
       </div>
-      {url && (
+      {url ? (
         <div className={`${classes.oCtaRegion}`}>
           <Link href={url} className="aBtn btnAlt">
             <span className="fnt21f">{buttonLabel}</span>
           </Link>
         </div>
-      )}
+      ) : null}
       {hasOverlay ? (
         <div className={classes.oOverlays}>
           <span>

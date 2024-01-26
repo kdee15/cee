@@ -10,7 +10,7 @@ h1 *,
 .fntH1 *,
 .fnt42,
 .fnt42 * {
-  font-family: $exo;
+  font-family: $garet;
   font-weight: 800;
   @include scaledFont(28, 42, 42, 30, 46, 46);
 }
@@ -19,7 +19,7 @@ h2,
 h2 *,
 .fntH2,
 .fntH2 * {
-  font-family: $exo;
+  font-family: $garet;
   font-weight: 800;
   @include scaledFont(24, 36, 36, 30, 36, 36);
 }
@@ -29,7 +29,7 @@ h3 *,
 .fntH3,
 .fntH3 * {
   @include scaledFont(16, 18, 18, 20, 22, 22);
-  font-family: $exo;
+  font-family: $garet;
   font-weight: 800;
 }
 
@@ -38,7 +38,7 @@ h4 *,
 .fntH4,
 .fntH4 * {
   @include scaledFont(16, 18, 18, 20, 22, 22);
-  font-family: $exo;
+  font-family: $garet;
   font-weight: 800;
 }
 
@@ -47,7 +47,7 @@ h5 *,
 .fntH5,
 fntH5 * {
   @include scaledFont(16, 18, 18, 20, 22, 22);
-  font-family: $exo;
+  font-family: $garet;
   font-weight: 800;
 }
 
@@ -61,9 +61,19 @@ fntH5 * {
   @include font(38);
 }
 
+.fnt31,
+.fnt31 * {
+  @include scaledFont(26, 31, 31, 32, 38, 38);
+}
+
 .fnt30f,
 .fnt30f * {
   @include font(30);
+}
+
+.fnt29,
+.fnt29 * {
+  @include scaledFont(22, 29, 29, 26, 34, 34);
 }
 
 .fnt28f,
@@ -84,6 +94,11 @@ fntH5 * {
 .fnt18f,
 .fnt18f * {
   @include font(18);
+}
+
+.fnt18,
+.fnt18 * {
+  @include scaledFont(14, 18, 18, 18, 22, 22);
 }
 
 .fnt16b,
