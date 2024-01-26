@@ -1,0 +1,115 @@
+// MOLECULE [ NAVIGATION ] ############################################################################################
+
+@import "../../../scss/.base/_module-index";
+
+// A. GLOBAL STYLES +++++++++++++++++++++++++++++++++++++
+
+.oTwoColumnCopyImage {
+  position: relative;
+  overflow: hidden;
+  padding: 120px 0;
+  &.yes {
+    min-height: 100vh;
+    padding: 0;
+    .oRow {
+      min-height: 100vh;
+      align-content: center;
+    }
+  }
+  &.orange {
+    .aBackgroundImage {
+      &:after {
+        background-color: rgba($orangeDark, 0.8);
+      }
+    }
+    .oColBody {
+      * {
+        color: white;
+      }
+    }
+  }
+
+  .oContainer,
+  .oRow {
+    z-index: 1;
+    position: relative;
+  }
+}
+
+.aBackgroundImage {
+  @include position(absolute, 0);
+  background-position: center;
+  background-size: cover;
+  background-position: center;
+  opacity: 0.7;
+  z-index: -1;
+  &:after {
+    content: "";
+    @include position(absolute, 0);
+    background-color: rgba(black, 0.5);
+  }
+}
+
+// A. END +++++++++++++++++++++++++++++++++++++++++++++++
+
+// B. GRACEFUL DEGRADATION ++++++++++++++++++++++++++++++
+
+@media ($md-dn) {
+}
+
+// B. END +++++++++++++++++++++++++++++++++++++++++++++++
+
+// C. MIN-WIDTH: 768px ++++++++++++++++++++++++++++++++++
+
+@media ($md-up) {
+  .oRow {
+    &.right {
+      .oColImage {
+        order: 1;
+      }
+      .oColBody {
+        order: 2;
+        padding-left: 5vw;
+      }
+    }
+    &.left {
+      .oColImage {
+        order: 2;
+      }
+      .oColBody {
+        order: 1;
+        padding-right: 5vw;
+      }
+    }
+  }
+  .aBackgroundImage {
+    &.right {
+      &:after {
+        left: 50%;
+      }
+    }
+    &.left {
+      &:after {
+        right: 50%;
+      }
+    }
+  }
+}
+
+// C. END +++++++++++++++++++++++++++++++++++++++++++++++
+
+// D. MIN-WIDTH: 992px ++++++++++++++++++++++++++++++++++
+
+@media ($md-up) {
+}
+
+// D. END +++++++++++++++++++++++++++++++++++++++++++++++
+
+// E. MIN-WIDTH: 1200px +++++++++++++++++++++++++++++++++
+
+@media ($lg-up) {
+}
+
+// E. END +++++++++++++++++++++++++++++++++++++++++++++++
+
+// END OF FILE ########################################################################################################

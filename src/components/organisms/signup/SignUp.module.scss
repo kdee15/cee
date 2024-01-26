@@ -1,0 +1,66 @@
+// MOLECULE [ NAVIGATION ] ############################################################################################
+
+@import "../../../scss/.base/_module-index";
+
+// A. GLOBAL STYLES +++++++++++++++++++++++++++++++++++++
+
+.oSignUp {
+  padding: 50px 20px;
+  position: relative;
+  .aBlockTitle {
+    text-align: center;
+  }
+  .oForm {
+    width: 100%;
+    max-width: 980px;
+    margin: 0 auto;
+    background-color: $orange;
+    border-radius: 40px;
+    padding: 30px 50px;
+    display: flex;
+    gap: 30px;
+    align-items: center;
+
+    .mInput {
+      width: 40%;
+      .aInput {
+        width: 100%;
+        height: 60px;
+        padding-left: 20px;
+        font-family: $garetHeavy;
+      }
+    }
+  }
+}
+
+// A. END +++++++++++++++++++++++++++++++++++++++++++++++
+
+// B. GRACEFUL DEGRADATION ++++++++++++++++++++++++++++++
+
+@media ($md-dn) {
+}
+
+// B. END +++++++++++++++++++++++++++++++++++++++++++++++
+
+// C. MIN-WIDTH: 768px ++++++++++++++++++++++++++++++++++
+
+@media ($md-up) {
+}
+
+// C. END +++++++++++++++++++++++++++++++++++++++++++++++
+
+// D. MIN-WIDTH: 992px ++++++++++++++++++++++++++++++++++
+
+@media ($md-up) {
+}
+
+// D. END +++++++++++++++++++++++++++++++++++++++++++++++
+
+// E. MIN-WIDTH: 1200px +++++++++++++++++++++++++++++++++
+
+@media ($lg-up) {
+}
+
+// E. END +++++++++++++++++++++++++++++++++++++++++++++++
+
+// END OF FILE ########################################################################################################

@@ -1,0 +1,77 @@
+// COMPONENT [ CAROUSEL ] ########################################################################################
+
+@import "../../../scss/.base/_module-index";
+
+.oHeroBanner {
+  // A. GLOBAL STYLES +++++++++++++++++++++++++++++++++++++
+  position: relative;
+  min-height: 100vh;
+
+  .oBody {
+    min-height: 100vh;
+    .mTitle {
+      @include middle-align();
+      text-align: center;
+      color: white;
+      font-family: $garet;
+      text-shadow: 0 0 8px rgba(black, 0.8);
+      .aTitle {
+        * {
+          line-height: 3rem;
+          font-weight: 600;
+        }
+      }
+    }
+    .mCopy {
+      position: absolute;
+      bottom: 0;
+      width: 100%;
+      color: white;
+      @include center-align();
+      text-align: center;
+      margin-bottom: 5vh;
+      font-family: $garetHeavy;
+      * {
+        line-height: 2rem;
+      }
+    }
+  }
+
+  .aBackgroundImage {
+    @include position(absolute, 0);
+    @include bg-position(cover, center, center);
+    z-index: -1;
+  }
+
+  // A. END +++++++++++++++++++++++++++++++++++++++++++++++
+
+  // B. GRACEFUL DEGRADATION ++++++++++++++++++++++++++++++
+
+  @media ($md-dn) {
+  }
+
+  // B. END +++++++++++++++++++++++++++++++++++++++++++++++
+
+  // C. MIN-WIDTH: 768px ++++++++++++++++++++++++++++++++++
+
+  @media ($md-up) {
+  }
+
+  // C. END +++++++++++++++++++++++++++++++++++++++++++++++
+
+  // D. MIN-WIDTH: 992px ++++++++++++++++++++++++++++++++++
+
+  @media ($lg-up) {
+  }
+
+  // D. END +++++++++++++++++++++++++++++++++++++++++++++++
+
+  // E. MIN-WIDTH: 1200px +++++++++++++++++++++++++++++++++
+
+  @media ($xl-up) {
+  }
+
+  // E. END +++++++++++++++++++++++++++++++++++++++++++++++
+}
+
+// END OF FILE ########################################################################################################

@@ -1,0 +1,80 @@
+// MOLECULE [ NAVIGATION ] ############################################################################################
+
+@import "../../../scss/.base/_module-index";
+
+// A. GLOBAL STYLES +++++++++++++++++++++++++++++++++++++
+
+.oCapsuleItemList {
+  position: relative;
+  height: 100vh;
+  overflow: hidden;
+  background-color: white;
+}
+
+.oColText {
+  font-family: $garetHeavy;
+  padding: 40px;
+  text-align: center;
+  background-color: $orangeDark;
+  border-radius: 0 0 50px 50px;
+}
+
+.oBackgroundImage {
+  @include position(absolute, 0);
+  background-position: center;
+  background-size: cover;
+  background-position: center;
+}
+
+.oCapsules {
+  position: absolute;
+  bottom: 0;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  gap: 20px;
+  .mCapsuleCard {
+    text-align: center;
+    padding: 80px 35px 50px;
+    max-width: 280px;
+    background-color: $orange;
+    border-radius: 100% 100% 0 0;
+    color: white;
+    text-shadow: 0 3px 5px black;
+    .aTitle {
+      font-family: $garetHeavy;
+    }
+  }
+}
+
+// A. END +++++++++++++++++++++++++++++++++++++++++++++++
+
+// B. GRACEFUL DEGRADATION ++++++++++++++++++++++++++++++
+
+@media ($md-dn) {
+}
+
+// B. END +++++++++++++++++++++++++++++++++++++++++++++++
+
+// C. MIN-WIDTH: 768px ++++++++++++++++++++++++++++++++++
+
+@media ($md-up) {
+}
+
+// C. END +++++++++++++++++++++++++++++++++++++++++++++++
+
+// D. MIN-WIDTH: 992px ++++++++++++++++++++++++++++++++++
+
+@media ($md-up) {
+}
+
+// D. END +++++++++++++++++++++++++++++++++++++++++++++++
+
+// E. MIN-WIDTH: 1200px +++++++++++++++++++++++++++++++++
+
+@media ($lg-up) {
+}
+
+// E. END +++++++++++++++++++++++++++++++++++++++++++++++
+
+// END OF FILE ########################################################################################################
