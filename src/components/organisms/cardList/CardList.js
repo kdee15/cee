@@ -7,7 +7,7 @@ export default function CardList(contentModule) {
     contentModule.contentModule.fields;
   return (
     <section className={`${classes.oCardList} ${classes[customClass]}`}>
-      <div className={`${classes.oContainer} container`}>
+      <div className={`${classes.oTitleContainer} container`}>
         {title ? (
           <div className={`${classes.oRow} row`}>
             <h2 className={`${classes.aBlockTitle} fntH2`}>{title}</h2>

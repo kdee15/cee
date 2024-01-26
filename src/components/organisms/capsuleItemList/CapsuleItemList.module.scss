@@ -13,14 +13,14 @@
 
 .oColText {
   font-family: $garetHeavy;
-  margin-top: 30px;
+  padding: 40px;
   text-align: center;
+  background-color: $orangeDark;
+  border-radius: 0 0 50px 50px;
 }
 
 .oBackgroundImage {
   @include position(absolute, 0);
-  top: 25vh;
-  bottom: 25vh;
   background-position: center;
   background-size: cover;
   background-position: center;

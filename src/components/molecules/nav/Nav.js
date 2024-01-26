@@ -1,4 +1,6 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
+import { gsap } from "gsap";
+import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
 import { isMobile } from "react-device-detect";
 import BurgerMenu from "../burgerMenu/BurgerMenu";
 import Link from "next/dist/client/link";
@@ -8,15 +10,42 @@ export default function Nav(contentModule) {
   const [isActive, setIsActive] = useState();
   const [mobileView, setMobileView] = useState();
   const handleToggle = () => setIsActive(!isActive);
+  gsap.registerPlugin(ScrollTrigger);
+  const navbarRef = useRef(null);
 
   useEffect(() => {
     setMobileView(isMobile);
-  }, []);
-  const { menuLinks } = contentModule.contentModule.fields;
 
+    const showNav = gsap
+      .fromTo(
+        navbarRef.current,
+        {
+          opacity: 0,
+        },
+        {
+          opacity: 1,
+          duration: 0.4,
+        }
+      )
+      .progress(1);
+    ScrollTrigger.create({
+      start: "top top",
+      end: "max",
+      onUpdate: (self) => {
+        self.direction === -1 ? showNav.play() : showNav.reverse();
+      },
+    });
+  }, []);
+
+  const { menuLinks } = contentModule.contentModule.fields;
   return (
-    <nav className={classes.oNavMain}>
-      <span onClick={handleToggle} className={classes.burgerWrapper}>
+    <nav className={classes.oNavMain} ref={navbarRef}>
+      <span
+        onClick={handleToggle}
+        className={`${classes.burgerWrapper} ${
+          isActive ? `${classes.navOpen}` : `${classes.navClosed}`
+        }`}
+      >
         <BurgerMenu />
       </span>
       {mobileView ? (

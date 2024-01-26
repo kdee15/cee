@@ -33,7 +33,7 @@ export default function CapsuleItemList(contentModule) {
               <span>{item.fields.title}</span>
               <span>{item.fields.symbol}</span>
             </div>
-            <p className={`${classes.mCopy} fnt28f`}>{item.fields.copy}</p>
+            <p className={`${classes.mCopy} fnt23`}>{item.fields.copy}</p>
           </div>
         ))}
       </div>

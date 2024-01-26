@@ -1,7 +1,5 @@
 import { createClient } from "contentful";
 import Nav from "../components/molecules/nav/Nav";
-import HeroCarousel from "../components/organisms/heroCarousel/HeroCarousel";
-import TwoColumnText from "../components/organisms/twoColumnText/TwoColumnText";
 import CapsuleItemList from "../components/organisms/capsuleItemList/CapsuleItemList";
 import CardList from "../components/organisms/cardList/CardList";
 import TestimonialsCarousel from "../components/organisms/testimonialsCarousel/TestimonialsCarousel";
@@ -9,6 +7,8 @@ import SignUp from "../components/organisms/signup/SignUp";
 import ComponentFooter from "../components/blocks/footer/Footer";
 import HeroBanner from "../components/organisms/heroBanner/HeroBanner";
 import TwoColumnCopyImage from "../components/organisms/twoColumnCopyImage/TwoColumnCopyImage";
+import CardCarousel from "../components/organisms/cardCarousel/CardCarousel";
+import testiStyles from "../components/organisms/testimonialsCarousel/TestimonialsCarousel.module.scss";
 const { C_SPACE_ID, C_DELIVERY_KEY } = require("../helpers/contentful-config");
 
 export async function getStaticProps(context) {
@@ -45,8 +45,8 @@ export default function Home({ Page, Footer }) {
     1: heroBanner,
     2: whatWeDo,
     3: unlockCreativity,
-    4: twoColumnText,
-    5: capsuleItemList,
+    4: capsuleItemList,
+    5: pillars,
     6: testimonials,
   } = Page[0].fields.components;
 
@@ -57,8 +57,11 @@ export default function Home({ Page, Footer }) {
       <CardList contentModule={whatWeDo} />
       <TwoColumnCopyImage contentModule={unlockCreativity} />
       <CapsuleItemList contentModule={capsuleItemList} />
-      <SignUp />
-      <TestimonialsCarousel contentModule={testimonials} />
+      <CardCarousel contentModule={pillars} />
+      <section className={testiStyles.oTestimonialWrapper}>
+        <SignUp />
+        <TestimonialsCarousel contentModule={testimonials} />
+      </section>
       <ComponentFooter contentModule={Footer} />
     </div>
   );

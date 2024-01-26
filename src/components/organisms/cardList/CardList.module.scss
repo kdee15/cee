@@ -11,13 +11,21 @@
   background-color: #e4e4e4;
   &.oWhatWeDo {
     height: auto;
-    padding: 120px 0;
+    padding: 0 0 120px;
     background-color: white;
-
-    .aBlockTitle {
-      text-align: center;
-      margin: 0 auto 50px;
+    .oTitleContainer {
+      max-width: 100%;
+      background-color: $orangeDark;
+      margin-bottom: 100px;
+      .aBlockTitle {
+        @include scaledFont(14, 18, 18, 20, 24, 24);
+        text-align: center;
+        padding: 40px 15px;
+        margin: 0 auto;
+        max-width: 840px;
+      }
     }
+
     .oCards {
       .mCard {
         .mImage {
