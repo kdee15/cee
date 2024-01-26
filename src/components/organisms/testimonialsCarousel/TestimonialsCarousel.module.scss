@@ -5,11 +5,14 @@
 // A. GLOBAL STYLES +++++++++++++++++++++++++++++++++++++
 
 .oTestimonialWrapper {
-  background-color: red;
+  background-image: url("/images/content/testimonialsBackground.jpg");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
 }
 
 .oCarouselTestimonials {
-  background-color: white;
+  background-color: rgba($orangeDark, 0.6);
 }
 
 // A. END +++++++++++++++++++++++++++++++++++++++++++++++
