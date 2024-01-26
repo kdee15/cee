@@ -14,10 +14,10 @@ export default function TestimonialCarouselCard(props) {
             backgroundImage: `url(http:${image.fields.file.url})`,
           }}
         ></div>
+        <p className={`${classes.aTitle} fnt16b`}>{title}</p>
       </figure>
       <div className={`${classes.oText}`}>
-        <p className={`${classes.aTitle} fnt21f`}>{title}</p>
-        <div className={`${classes.mCopy} fnt21f`}>
+        <div className={`${classes.mCopy} fnt15f`}>
           {documentToReactComponents(copy)}
         </div>
       </div>

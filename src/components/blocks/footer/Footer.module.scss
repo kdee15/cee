@@ -6,8 +6,33 @@
 
 .oFooter {
   position: relative;
-  padding: 150px 0 200px;
+  padding: 50px 0 20px;
   overflow: hidden;
+  background-color: $orangeDark;
+  min-height: 100vh;
+  .oContainer {
+    min-height: 60vh;
+    * {
+      color: white;
+      font-family: $garet;
+    }
+  }
+  .aBackgroundImage {
+    min-height: 40vh;
+    @include bg-position(cover, center, center);
+    display: flex;
+    margin: 0;
+    padding: 0;
+    .copyright {
+      text-align: center;
+      margin-top: 50px;
+      align-self: flex-end;
+      width: 100%;
+      margin-bottom: 20px;
+      color: white;
+      font-family: $garetHeavy;
+    }
+  }
 }
 
 .mLogo {
@@ -70,11 +95,6 @@
       margin: 30px auto;
     }
   }
-}
-
-.copyright {
-  text-align: center;
-  margin-top: 50px;
 }
 
 .oOverlays {
@@ -151,6 +171,14 @@
 // E. MIN-WIDTH: 1200px +++++++++++++++++++++++++++++++++
 
 @media ($lg-up) {
+  .oFooter {
+    .oContainer {
+      min-height: 55vh;
+    }
+    .aBackgroundImage {
+      min-height: 45vh;
+    }
+  }
 }
 
 // E. END +++++++++++++++++++++++++++++++++++++++++++++++

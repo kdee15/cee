@@ -4,7 +4,7 @@ export default function SignUp() {
   return (
     <section className={classes.oSignUp}>
       <h2 className={`${classes.aBlockTitle} fnt27f`}>
-        SUBSCRIBE TO GET THE LATEST NEWS AND UPDATES
+        STAY INFORMED. JOIN OUR MOVEMENT.
       </h2>
       <form action="" className={classes.oForm}>
         <label
@@ -20,7 +20,7 @@ export default function SignUp() {
           <input type="text" name="email" className={classes.aInput} />
         </label>
         <span>
-          <button className={`${classes.aBtn} aBtn`}>Sign Up</button>
+          <button className={`${classes.aBtn} aBtn`}>COUNT ME IN</button>
         </span>
       </form>
     </section>

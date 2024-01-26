@@ -5,10 +5,13 @@
 // A. GLOBAL STYLES +++++++++++++++++++++++++++++++++++++
 
 .oSignUp {
-  padding: 50px 20px;
+  padding: 60px 20px 30px;
   position: relative;
+  background-color: rgba(white, 0.5);
   .aBlockTitle {
     text-align: center;
+    font-family: $garetHeavy;
+    margin-bottom: 20px;
   }
   .oForm {
     width: 100%;
